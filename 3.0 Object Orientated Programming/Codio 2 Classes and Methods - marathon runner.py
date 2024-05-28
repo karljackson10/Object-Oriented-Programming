@@ -91,22 +91,12 @@ def print_attributes(obj):
         print(attr, getattr(obj, attr) )
 
 #main
-start=Time(9,75)
-#start.hour = 9
-#start.minute = 75
-#start.second =00
-print(start.valid_time())
-#start.print_time()
-print('start :',start)
-#duration = Time(1,35)
-duration=100
+race_time = Time()
+race_time.hour = 3
+race_time.minute = 34
+race_time.second = 5
 
-print('duration: ',duration)
-print('end: ',start+duration)
-print('end: ', duration+start)
-print_attributes(start)
+race_distance = 26.2
 
-#end = start.increment(1337)
-#print(end)
-#end.print_time()
-#print(end.is_after(start))
+total_min = race_time.time_to_int()/60
+print('min per mile: %f' %(total_min/race_distance))
